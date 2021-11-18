@@ -1,42 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/materialize.1.0.0.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <title>Project Cordova</title>
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <title>Cordova Niels Bellens</title>
+    <style>
+        .spa {
+            display: none;
+        }
+
+        #tabDevice {
+            display: block;
+        }
+
+
+    </style>
 </head>
 <body>
-<header class="navbar-fixed">
-    <nav class="grey">
+<!-- Fixed navbar -->
+<div class="navbar-fixed">
+    <nav class="teal">
         <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo center">Project Cordova</a>
+            <a href="#!" class="brand-logo center">Cordova Niels Bellens</a>
+            <a href="#!" data-target="nav-mobile" class="sidenav-trigger show-on-large">
+                <i class="material-icons">menu</i>
+            </a>
         </div>
     </nav>
-</header>
-<main class="container">
-    <div class="row">
-        <p>Custom + overwrite css styles: <b>css/app.css</b></p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos nihil possimus, quidem
-            recusandae
-            velit! Alias aut deserunt ducimus iusto perspiciatis quam quo repellendus reprehenderit repudiandae
-            similique
-            ut, velit voluptatum!</p>
-        <p>Architecto assumenda consectetur eligendi eveniet facilis impedit in iste, maxime modi molestiae nesciunt non
-            optio praesentium quasi quia rem temporibus totam vitae voluptas voluptate? Amet cum id magnam nostrum
-            quam.</p>
-        <p>Accusantium aliquam consequuntur cumque cupiditate dolore dolorum ea eaque eligendi eos, exercitationem
-            itaque
-            iusto magni maxime minima molestiae molestias neque odio placeat quae, quam quas qui quis sed sunt unde.</p>
+</div>
+<!-- Fixed sideNav -->
+<ul id="nav-mobile" class="sidenav">
+    <li><a href="#!" data-show="tabDevice"><i class="material-icons">build</i>About</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabNetwork"><i class="material-icons">network_check</i>Current location</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>Compass</a></li>
+</ul>
+<!-- Grid -->
+<div class="container">
+    <div class="row spa" id="tabDevice">
+        <div class="col s12">
+            <h4><i class="material-icons">build</i> About</h4>
+            <p><b>Creator: </b>Niels Bellens</p>
+            <p><b>Class: </b>2appai01</p>
+            <p><b>What to expect?: </b>You can see your current location and store it into the database, also popular
+                locations will be seen</p>
+        </div>
     </div>
-</main>
-<script src="js/jquery.3.5.1min.js"></script>
-<script src="js/materialize.1.0.0.min.js"></script>
+
+    <div class="row spa" id="tabNetwork">
+        <div class="col s12">
+            <h4>Current location</h4>
+
+        </div>
+    </div>
+
+    <div class="row spa" id="tabCompass">
+        <div class="col s12">
+            <h4><i class="material-icons">my_location</i> Current location</h4>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+            <div id="compassView">
+                <h5 id="compass">&nbsp;</h5>
+                <p>&#9660;</p>
+                <img id="compassImg" src="assets/compass.png" width="100%" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="cordova.js"></script>
+<script src="js/device.js"></script>
+<script src="js/network.js"></script>
+<script src="js/compass.js"></script>
+<!-- JavaScript defer: https://www.w3schools.com/tags/att_script_defer.asp -->
 <script defer src="js/app.js"></script>
 </body>
 </html>
