@@ -41,7 +41,7 @@
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>Compass</a></li>
+    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>API</a></li>
 </ul>
 <!-- Grid -->
 <div class="container">
@@ -58,19 +58,17 @@
     <div class="row spa" id="tabNetwork">
         <div class="col s12">
             <h4>Current location</h4>
+            <p class="btn" onclick="getLocation()">Waar ben ik?</p>
+            <p id="locatie"></p>
+            <p id="opslaan" class="btn">Sla deze locatie op</p>
 
         </div>
     </div>
 
-    <div class="row spa" id="tabCompass">
+    <div class="row spa" id="">
         <div class="col s12">
             <h4><i class="material-icons">my_location</i> Current location</h4>
-            <p>
 
-            </p>
-            <p>
-
-            </p>
             <div id="compassView">
                 <h5 id="compass">&nbsp;</h5>
                 <p>&#9660;</p>
@@ -79,11 +77,23 @@
 
         </div>
     </div>
+
+    <div class="row spa" id="tabCompass">
+        <div class="col s12">
+            <h4><i class="material-icons">my_location</i> API</h4>
+            <p>
+
+            </p>
+
+
+        </div>
+    </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="cordova.js"></script>
+<script src="js/current_location.js"></script>
 <script src="js/device.js"></script>
 <script src="js/network.js"></script>
 <script src="js/compass.js"></script>
