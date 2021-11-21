@@ -68,3 +68,10 @@ input {
     width: 180px;
     border-radius: 50%;
 }
+
+
+.pkmn-card {
+    width: 215px;
+    height: 300px;
+    margin: 15px;
+}
