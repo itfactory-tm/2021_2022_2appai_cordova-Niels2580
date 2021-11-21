@@ -6,6 +6,8 @@
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+
+
     <title>Cordova Niels Bellens</title>
     <style>
         .spa {
@@ -37,11 +39,11 @@
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="#!" data-show="tabNetwork"><i class="material-icons">network_check</i>Current location</a></li>
+    <li><a href="#!" data-show="tabNetwork"><i class="material-icons">my_location</i>Current location</a></li>
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>API</a></li>
+    <li><a href="#!" data-show="tabCompass"><i class="material-icons">memory</i>Pokédex</a></li>
 </ul>
 <!-- Grid -->
 <div class="container">
@@ -50,8 +52,8 @@
             <h4><i class="material-icons"></i> About</h4>
             <p><b>Creator: </b>Niels Bellens</p>
             <p><b>Class: </b>2appai01</p>
-            <p><b>What to expect?: </b>You can see your current location and store it into the database, also popular
-                locations will be seen</p>
+            <p><b>What to expect?: </b>You can see your current location and store it into the database, also because i
+                like pokémon there will be a pokédex</p>
         </div>
     </div>
 
@@ -76,11 +78,19 @@
 
     <div class="row spa" id="tabCompass">
         <div class="col s12">
-            <h4><i class="material-icons">my_location</i> API</h4>
-            <p>
 
-            </p>
-
+            <form action="" onsubmit="searchPokemon(event)">
+                <input type="text" name="pokemon" autocomplete="off">
+            </form>
+            <div data-poke-card class="poke-card">
+                <div data-poke-name>Pokedex</div>
+                <div data-poke-img-container class="img-container">
+                    <img data-poke-img class="poke-img" src="poke-shadow.png"/>
+                </div>
+                <div data-poke-id></div>
+                <div data-poke-types class="poke-types"></div>
+                <div data-poke-stats class="poke-stats"></div>
+            </div>
 
         </div>
     </div>
@@ -90,6 +100,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="cordova.js"></script>
 <script src="js/current_location.js"></script>
+<script src="js/api.js"></script>
 <script src="js/device.js"></script>
 <script src="js/network.js"></script>
 <script src="js/compass.js"></script>
