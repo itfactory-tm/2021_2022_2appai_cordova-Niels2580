@@ -47,7 +47,7 @@
 <div class="container">
     <div class="row spa" id="tabDevice">
         <div class="col s12">
-            <h4><i class="material-icons">build</i> About</h4>
+            <h4><i class="material-icons"></i> About</h4>
             <p><b>Creator: </b>Niels Bellens</p>
             <p><b>Class: </b>2appai01</p>
             <p><b>What to expect?: </b>You can see your current location and store it into the database, also popular
@@ -60,23 +60,19 @@
             <h4>Current location</h4>
             <p class="btn" onclick="getLocation()">Waar ben ik?</p>
             <p id="locatie"></p>
-            <p id="opslaan" class="btn">Sla deze locatie op</p>
+            <p id="addTask" class="btn">Sla deze locatie op</p>
 
+
+            <ul class="collection">
+                <!-- Dummy task as an example -->
+                <li class="collection-item avatar">
+                    <i class="material-icons circle red deleteTask" data-task="0">delete_forever</i>
+                    <div class="title" data-task="0" contenteditable>Dummy location</div>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <div class="row spa" id="">
-        <div class="col s12">
-            <h4><i class="material-icons">my_location</i> Current location</h4>
-
-            <div id="compassView">
-                <h5 id="compass">&nbsp;</h5>
-                <p>&#9660;</p>
-                <img id="compassImg" src="assets/compass.png" width="100%" alt="">
-            </div>
-
-        </div>
-    </div>
 
     <div class="row spa" id="tabCompass">
         <div class="col s12">
