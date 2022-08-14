@@ -41,7 +41,7 @@
     <li>
         <div class="divider"></div>
     </li>
-    <li id="laden"><a href="#!" data-show="tabLocation"><i class="material-icons">my_location</i>Current location</a>
+    <li><a href="#!" data-show="tabFoto"><i class="material-icons">my_location</i>Picture</a>
     </li>
     <li>
         <div class="divider"></div>
@@ -51,7 +51,7 @@
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="#!" data-show="tabDexcards"><i class="material-icons">memory</i>Pokécards</a></li>
+    <li id="laden"><a href="#!" data-show="tabDexcards"><i class="material-icons">memory</i>Pokécards</a></li>
 </ul>
 <!-- Grid -->
 <div class="container">
@@ -69,18 +69,15 @@
 
     </div>
 
-    <div class="row spa" id="tabLocation">
+    <div class="row spa" id="tabFoto">
         <div class="col s12">
-            <h4>Current location</h4>
-            <p>foto</p>
+            <h4>Foto</h4>
+
             <button id="camera">Camera</button>
             <div id="foto">
                 <img src="" alt="" id="image">
             </div>
 
-            <div id="Isoutput" onload="laden()">
-
-            </div>
         </div>
     </div>
 
@@ -106,37 +103,43 @@
 
     <div class="row spa" id="tabDexcards">
         <div class="col s12">
+            <h4>History of searched pokémon: (localstorage)</h4>
+            <div id="Isoutput"
+            ">
 
-            <h1>Pokemon Card Search!</h1>
-            <form>
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
-                        <label class="sr-only" for="search">Pokemon Name</label>
-                        <input type="text" class="form-control mb-2" id="search" placeholder="Pikachu">
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mb-2" id="submit-button">Submit</button>
-                    </div>
-                </div>
-            </form>
-            <div class="container">
-                <div class="row" id="card-container">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" id="btn3" value="Remove">Remove all history</button>
 
+        <h4>Pokemon Card Search!</h4>
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="search">Pokemon Name</label>
+                    <input type="text" class="form-control mb-2" id="search" placeholder="Pikachu">
                 </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2" id="submit-button">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="row" id="card-container">
 
             </div>
+
         </div>
     </div>
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="cordova.js"></script>
-<script src="js/current_location.js"></script>
+<script src="js/localstorage.js"></script>
+<script src="js/foto.js"></script>
 <script src="js/api.js"></script>
 <script src="js/api2.js"></script>
-<script src="js/device.js"></script>
-<script src="js/network.js"></script>
-<script src="js/compass.js"></script>
+
+
 <!-- JavaScript defer: https://www.w3schools.com/tags/att_script_defer.asp -->
 <script defer src="js/app.js"></script>
 </body>
