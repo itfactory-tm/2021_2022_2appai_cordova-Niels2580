@@ -18,8 +18,8 @@ afstand. In het laatste tabje komt de generale informatie over mijn applicatie t
 
 ## Plugins used
 
-- [cordova-plugin-whitelist](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/)  
-  Used for ...
+- [cordova-plugin-camera](https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-camera/)  
+  Used for making a beautifull picture and have it in the app.
 
 ## Tip: GitHub Markdown
 
